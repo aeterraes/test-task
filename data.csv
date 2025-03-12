@@ -1,0 +1,23 @@
+#2
+mode: dir
+path: somefiles
+
+#3
+mode: files
+path: somefiles/a.txt
+action: string
+
+#4
+mode: dir
+path: somefiles
+action: count
+
+#5
+mode: files
+path: somefiles/a.txt, somefiles/c.txt
+action: replace
+
+#6
+mode: dir
+path: somefiles
+action: replace
