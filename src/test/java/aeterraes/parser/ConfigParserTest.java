@@ -34,7 +34,7 @@ class ConfigParserTest {
             
             #2
             mode: dir
-            path: D:\\playground\\somefiles
+            path: somefiles
             
             #3
             mode: files
@@ -71,7 +71,7 @@ class ConfigParserTest {
         Configuration config2 = configurations.get(1);
         assertEquals(2, config2.id());
         assertEquals("dir", config2.mode());
-        assertEquals(List.of("D:\\playground\\somefiles"), config2.path());
+        assertEquals(List.of("somefiles"), config2.path());
         assertEquals("string", config2.action());
 
         Configuration config3 = configurations.get(2);
