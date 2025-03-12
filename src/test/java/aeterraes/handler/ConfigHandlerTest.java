@@ -20,7 +20,7 @@ class ConfigHandlerTest {
     void setUp() {
         configurations = List.of(
                 new Configuration(3, "files", List.of("somefiles/a.txt"), "string"),
-                new Configuration(4, "dir", List.of("somefiles"), "count"),
+                new Configuration(4, "files", List.of("somefiles/a.txt", "somefiles/b.txt", "somefiles/c.txt"), "count"),
                 new Configuration(5, "files", List.of("somefiles/a.txt", "somefiles/c.txt"), "replace")
         );
     }
@@ -56,8 +56,8 @@ class ConfigHandlerTest {
               "configFile" : "data.csv",
               "configurationID" : 4,
               "configurationData" : {
-                "mode" : "dir",
-                "path" : "somefiles"
+                "mode" : "files",
+                "path" : "somefiles/a.txt, somefiles/b.txt, somefiles/c.txt"
               },
               "out" : {
                 "result" : [ [ 4, 1, 2 ], [ 3, 1, 2 ], [ 1, 2, 5 ], [ 2, 2, 1 ], [ 0, 4, 0 ], [ 0, 0, 0 ] ]
